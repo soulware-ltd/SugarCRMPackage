@@ -1,0 +1,8 @@
+{
+    "name": "soulware/sugarcrm-package",
+    "description": "Skeleton for SugarCRM CE packages.",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
