@@ -57,14 +57,29 @@ After the basic setup there are two things you have to consider using composer:
 1. Dependencies:
 
 Set up any dependencies you need, and run: 
-`$ composer install` 
+```
+$ composer install
+```
 
 Include the composer autoloader in any file you need to use your dependencies to get access for the required classes, for example if your file is in the folder *src/*:
-`require_once __DIR__ . '/../vendor/autoload.php';`
+```
+require_once __DIR__ . '/../vendor/autoload.php';
+```
 
 2. Preparation for publishing the package
 
-If you want to publish your package, ([read the packagist naming conventions section](https://packagist.org/about)) first. For publishing versions and setup stability please refer to "#6. implement your package", for actually publish your work read "#7 Publish your work on packagist".
+If you want to publish your package, ([read the packagist naming conventions section](https://packagist.org/about)) first. 
+
+Set up directories according to your namespaces inside your *src/* folder [following the PSR-0 standard](https://getcomposer.org/doc/04-schema.md#psr-0). In your namespace use `Soulware` as vendor name and user your project name as namespace. For example if your project is *"EditViewOnInstall"*, you should set the namespace in your classes to `namespace Soulware\EditViewOnInstall;`. You should create your classes inside *src/Soulware/EditViewOnInstall/* and set up the *autoload* section in your *composer.json* as below:
+```
+"autoload": {
+  "psr-0": {
+    "Soulware\\EditViewOnInstall\\": "src/"
+  }
+}
+```
+
+For publishing versions and setup stability please refer to "#6. implement your package", for actually publish your work read "#7 Publish your work on packagist".
 
 ###6. Implement your package
 
@@ -75,9 +90,10 @@ Tag versions according the [conventions](https://getcomposer.org/doc/04-schema.m
 ###7. (Optional) Publish your work on packagist
 
 Add your repository to packagist.org (especially if it's a helper class or other utility) to let other projects user it as a dependency. If you set everithing up properly according to this checklist, you only have to do three steps on [packagist.org](https://packagist.org/):
-1. Register and log in
-2. Add your package with the URL of the Github repository
-3. Set up Packagist service hook on your Github repository according to the instructions on your [profile page](https://packagist.org/profile/).
+
+1. Register and log in 
+2. Add your package with the URL of the Github repository 
+3. Set up Packagist service hook on your Github repository according to the instructions on your [profile page](https://packagist.org/profile/). 
 
 ###8. (Optional) Create installable SugarCRM package
 
