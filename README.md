@@ -12,7 +12,7 @@ Create a local development environment with basic directory structure and requir
 - src/
 - composer.json
 - manifest.php
-- license.txt
+- LICENSE
 - README.md
 - .gitignore
 
