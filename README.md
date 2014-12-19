@@ -79,7 +79,7 @@ Set up directories according to your namespaces inside your *src/* folder [follo
 }
 ```
 
-For publishing versions and setup stability please refer to "#6. implement your package", for actually publish your work read "#7 Publish your work on packagist".
+For publishing versions and setup stability please refer to "[#6. implement your package](#6-implement-your-package)", for actually publish your work read "[#7 Publish your work on packagist](#7-optional-publish-your-work-on-packagist)".
 
 ###6. Implement your package
 
